@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠팡!</title>
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="full-gnb-header">
+            <article class="top-bar">
+                <section class="fix">
+                    <menu id="subscribeHeader">
+                        <li class="favorites">즐겨찾기</li>
+                        <li class="store-join">입점센터</li>
+                        <li class="downa-arrow">▾</li>
+                    </menu>
+                    <menu id="headerMenu">
+                        <li id="login" class="login">로그인</li>
+                        <li id="join" class="join">회원가입</li>
+                        <li class="cs-center more">고객센터</li>
+                    </menu>
+                </section>
+            </article>
+            <header id="header" class="new-header">
+                <div class="category-btn">
+                    <p>카테고리</p>
+                </div>
+                <section id="second-header">
+                    <div id="sticky-wrapper" class="sticky-wrapper">
+                        <span logo="logo" id="coupang-logo">
+                            <img src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png"
+                                width="174" height="41" alt="쿠팡로고">
+                        </span>
+                        <div id="big-search-form">
+                            <form id="headerSearchForm" method="get" action="/np/search/products"
+                                data-actionurl="/np/search">
+                                <fieldset>
+                                    <legend>상품검색</legend>
+                                    <div class="header-searchForm">
+                                        <div class="select--category">
+                                            <p class="select--category--button"></p>
+                                            <p class="select--category--current">전체</p>
+                                        </div>
+                                        <select id="searchCategories" class="search_category_filter" data-name
+                                            sb="7196484" style="display: none;"></select>
+                                        <input type="hidden" name="component" id="searchSelectedCategory" value>
+                                        <label for="headerSearchKeyword">
+                                            <input type="text" id="headerSearchKeyword" name="q" title="쿠팡 상품 검색"
+                                                placeholder="찾고 싶은 상품을 검색해보세요!" autocomplete="off">
+                                        </label>
+                                        <a href="#" class="speech-content-mic speech-mic">마이크</a>
+                                    </div>
+                                    <input type="hidden" name="channel" value="user">
+                                    <a href="#" id="headerSearchBtn" class="search" title="검색">검색</a>
+                                </fieldset>
+                            </form>
+                            <div id="headerPopupWords" class="popularity-words new-header"></div>
+                            <div class="history-btns"></div>
+                        </div>
+                        <ul class="icon-menus">
+                            <li class="my-coupang more">
+                                <a href="https://mc.coupang.com/ssr/desktop/order/list">
+                                    <span class="my-coupang-icon gnb-icon-item">
+                                        <img src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#person"
+                                            width="30" height="30">
+                                    </span>
+                                    <span class="my-coupang-title">마이쿠팡</span>
+                                </a>
+                            </li>
+                            <li class="cart more">
+                                <a href="//cart.coupang.com/cartView.pang" class="mycart-preview-module">
+                                    <span class="cart-icon gnb-icon-item">
+                                        <img src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_new_gnb.svg#cart"
+                                            width="28" height="28">
+                                    </span>
+                                    <span class="cart-title">장바구니</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="gnb-menu-container" class="gnb-menu-container" style="overflow: hidden;">
+                        <div class="gnb-menu-btn gnb-menu-btn-left" style="display: inline-block;"></div>
+                        <ul class="gnb-menu-scroll gnb-menu-animation">
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupangplay.com/catalog">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image7.coupangcdn.com/image/coupang/common/coupang_play_logo_2024@3x.png">
+                                    <span>쿠팡플레이</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/campaigns/82">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image10.coupangcdn.com/image/coupang/rds/logo/xxhdpi/logo_rocket_symbol_large.png">
+                                    <span>로켓배송</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/categories/393760">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image9.coupangcdn.com/image/coupang/common/pc_header_rocket_fresh_1x.png">
+                                    <span>로켓프레시</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://login.coupang.com/corporation/member/landing-page">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image6.coupangcdn.com/image/coupang/common/logoBizonlyBrown.png">
+                                    <span>쿠팡비즈</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/coupangglobal">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image6.coupangcdn.com/image/coupang/home/icons/Overseas.png">
+                                    <span>로켓직구</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/goldbox">
+                                    <span>골드박스</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/omp">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image7.coupangcdn.com/image/coupang/home/icons/omp_pc_shortcut_20240510.png">
+                                    <span>판매자특가</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/campaigns/83">
+                                    <span>와우회원할인</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://www.coupang.com/np/coupangbenefit">
+                                    <span>이벤트/쿠폰</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://pages.coupang.com/p/54908">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image10.coupangcdn.com/image/coupang/home/icons/RETURNED_MARKET_B@2x.png">
+                                    <span>반품마켓</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://pages.coupang.com/p/63240">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image9.coupangcdn.com/image/coupang/common/icon_government_promotion.png">
+                                    <span>착한상점</span>
+                                    <i class="ic-new" data-new-tag-exposure-mills="0"></i>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://pages.coupang.com/p/bep">
+                                    <span>기획전</span>
+                                </a>
+                            </li>
+                            <li class="gnb-menu-item">
+                                <a href="https://trip.coupang.com?channel=gnb">
+                                    <img class="gnb-menu-item__icon"
+                                        src="//image9.coupangcdn.com/image/coupang/common/icon_travel.png">
+                                    <span>여행/티켓</span>
+                                    <i class="ic-new" data-new-tag-exposure-mills="0"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="gnb-menu-btn gnb-menu-btn-right gnb-menu-btn-active" style="display: inline-block;">
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </div>
+
+
+        <section class="main-today" id="todaysHot">
+            <img src="https://image6.coupangcdn.com/image/ccm/banner/423b950770f39a02dba083606f84fe08.jpg" width="1920"
+                height="450" class="main-today-bg today-bg1" style="display: block;">
+            <!-- 그 외 이미지 5개 생략-->
+            <div class="main-today__selected-product">
+                <ul class="main-today-thumbnails">
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://image7.coupangcdn.com/image/ccm/banner/3a547fc3b7097c47601885353f17810f.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://static.coupangcdn.com/ha/cmg_paperboy/image/1721975862393/C1_PC2.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://image6.coupangcdn.com/image/ccm/banner/c267878a86dc011cf2d2cb34e33420d1.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://static.coupangcdn.com/ta/cmg_paperboy/image/1722307454679/%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A6%E1%86%B7%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://static.coupangcdn.com/qa/cmg_paperboy/image/1722307425998/180x60.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                    <li class="todayshot-right-thumbnail first-item">
+                        <a href="#">
+                            <img src="https://image9.coupangcdn.com/image/ccm/banner/b970853fa00bc7d0fd19e4c3f1e6b799.jpg"
+                                width="180" height="60" alt>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contents home" id="contents">
+            <div id="todayDiscoveryUnit">
+                <div class="main-section">
+                    <h2>오늘의 발견</h2>
+                    <div class="discovery-list">
+                        <ul id="discovery-product-list">
+                            <li>
+                                <img src="https://static.coupangcdn.com/ra/cmg_paperboy/image/1721973497677/C2-1BIG.jpg"
+                                    width="468" height="298" aspect-ratio="auto 468 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://static.coupangcdn.com/na/cmg_paperboy/image/1721973564857/C2-2BIG.jpg"
+                                    width="468" height="298" aspect-ratio="auto 468 / 298;">
+                            </li>
+
+                            <li>
+                                <img src="https://static.coupangcdn.com/ca/cmg_paperboy/image/1721973485260/C2-3.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://static.coupangcdn.com/ya/cmg_paperboy/image/1721973552076/C2-4.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://static.coupangcdn.com/ba/cmg_paperboy/image/1721973523765/C2-5.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://static.coupangcdn.com/va/cmg_paperboy/image/1721973508497/C2-6.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+
+                            <li>
+                                <img src="https://static.coupangcdn.com/da/cmg_paperboy/image/1721973539211/C2-7BIG.jpg"
+                                    width="468" height="298" aspect-ratio="auto 468 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/x/image/displayitem/displayitem_82c11360-3aba-4f60-8d3c-f4380706bf55.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+                            <li>
+                                <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/x/image/displayitem/displayitem_8c5f56bc-bcb1-43e2-82ea-c61ff4f420f1.jpg"
+                                    width="228" height="298" aspect-ratio="auto 228 / 298;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="personalizedGW">
+
+                <div id="seller-promotion-container">
+                    <div class="promotion-decker-carousel">
+
+                        <div class="promotion-decker-carousel-header">
+                            <div class="promotion-title">
+                                오늘의
+                                <span class="orange">판매자 특가</span>
+                            </div>
+                            <div class="promotion-carousel-page-counter">
+                                <em>1</em>
+                                <span>/3</span>
+                            </div>
+                        </div>
+
+                        <div class="promotion-decker-carousel-body">
+                            <div class="promotion-carousel-scroller-wrap">
+                                <div class="carousel-scroller">
+                                    <ul class="promotion-carousel-list">
+                                        <li class="promotion-carousel-item" data-item-index="0">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/42e9/eb422716b8752f72020b1a31f1fbe6ab94d640e532bda29130ba28be35ab.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="item-title">
+                                                        <span>LCD 샤워기 / 수압상승/ 욕실청소/ 온도체크/샤워기/터치 스크린, 1개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">29,900</span>
+                                                        <span>원</span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:80%"></span>
+                                                        </span>
+                                                        <span class="review-count">(467)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="1">
+                                            <div class="odd">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/7c0f/649386aa605f20a250ee92a59e0ba3df1f8bc0b4f1ef62815a00e02fdefb.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="item-title">
+                                                        <span>여수 나래식품 무색소 못난이 명란젓 파지 백명란젓, 1개, 300g</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">13,800</span>
+                                                        <span>원</span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:90%"></span>
+                                                        </span>
+                                                        <span class="review-count">(852)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="2">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/44ed/1aadf1795edb9ae9e44b8a18260dadf3643c69ef804772977ff0ef4bac2b.jpeg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="item-title">
+                                                        <span>크리스피 눈꽃 허니쌀과자 개별포장 대용량 100개입, 32g, 1개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">18,990</span>
+                                                        <span>원</span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:100%"></span>
+                                                        </span>
+                                                        <span class="review-count">(35,020)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="3">
+                                            <div class="odd">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/2ca9/09d8e7f9e39c1ff3bc842d3c39478b9e93358764f76162c639f6f20b6f3b.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 50% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>포근포근 감자 3kg 5kg 중/대/특/왕특, 3kg(중), 1개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">6,830</span>
+                                                        <span>원</span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:70%"></span>
+                                                        </span>
+                                                        <span class="review-count">(14,422)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="4">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/b180/95521b3f022c6c203ce7a887cbb86545bb02c3143438d48fb7cb5d632c6f.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="item-title">
+                                                        <span>프리미엄갈치 200g(3토막) 5팩 총 1kg 15토막 / 10팩 총2kg 30토막, 약
+                                                            200g(3토막), 5개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">29,900</span>
+                                                        <span>원</span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:80%"></span>
+                                                        </span>
+                                                        <span class="review-count">(467)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="direct-promotion-container">
+                    <div class="promotion-decker-carousel">
+                        <div class="promotion-decker-carousel-header">
+                            <div class="promotion-title">
+                                전세계 핫딜
+                                <span class="purple">로켓직구 글로벌특가</span>
+                            </div>
+                            <div class="promotion-carousel-page-counter">
+                                <em>1</em>
+                                <span>/3</span>
+                            </div>
+                        </div>
+                        <div class="promotion-decker-carousel-body">
+                            <div class="promotion-carousel-scroller-wrap">
+                                <div class="carousel-scroller">
+                                    <ul class="promotion-carousel-list">
+                                        <li class="promotion-carousel-item" data-item-index="0">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/1bcd/15fe10bab5b92d1ad58f47de8d35036ba69cff9dca68293c636b772ec658.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 37% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>쏜리서치 S.A.T. 캡슐, 60정, 3개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">70,030</span>
+                                                        <span>원</span>
+                                                        <span class="item-badge-wrap">
+                                                            <img class="jikgu-badge"
+                                                                src="https://image6.coupangcdn.com/image/delivery_badge/default/pc/global_b/global_b.png">
+                                                        </span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:80%"></span>
+                                                        </span>
+                                                        <span class="review-count">(467)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="1">
+                                            <div class="odd">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/df5a/1364835786bb28909500f8c9daded68a8148dc40b39b4bca7ef1c86b4bae.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 71% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>Kazama 스텐 케틀팟 인덕션주전자 멀티포트 라면 포트라면 냄비 물주전자 파스타 계란 조리 가능
+                                                            1.5L-2L, 2L, 1개</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">19,900</span>
+                                                        <span>원</span>
+                                                        <span class="item-badge-wrap">
+                                                            <img class="jikgu-badge"
+                                                                src="https://image6.coupangcdn.com/image/delivery_badge/default/pc/global_b/global_b.png">
+                                                        </span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:90%"></span>
+                                                        </span>
+                                                        <span class="review-count">(207)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="2">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/731f/b061092fa24d43ed21db53cb34a4adefdd44c7d79ca7a3afce51208ed849.JPG"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 26% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>나이키 남녀공용 에브리데이 플러스 쿠쉬 크루 스포츠 양말 3개입 DH3822-902, 혼합
+                                                            색상</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">14,570</span>
+                                                        <span>원</span>
+                                                        <span class="item-badge-wrap">
+                                                            <img class="jikgu-badge"
+                                                                src="https://image6.coupangcdn.com/image/delivery_badge/default/pc/global_b/global_b.png">
+                                                        </span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:100%"></span>
+                                                        </span>
+                                                        <span class="review-count">(33)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="3">
+                                            <div class="odd">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/57ea/99b9256602e9d88ebd1e370d6f5a231d3db825e5a6f739dfe2ed063be833.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 50% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>Zeresi 블루투스 미니 휴대용 라벨 프린터 세트, 1세트</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">19,900</span>
+                                                        <span>원</span>
+                                                        <span class="item-badge-wrap">
+                                                            <img class="jikgu-badge"
+                                                                src="https://image6.coupangcdn.com/image/delivery_badge/default/pc/global_b/global_b.png">
+                                                        </span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:90%"></span>
+                                                        </span>
+                                                        <span class="review-count">(195)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="promotion-carousel-item" data-item-index="4">
+                                            <div class="even">
+                                                <div class="promotion-item-image">
+                                                    <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/8812/e009b2147f39fa9a61caec370ab1731fbed5f1ecefe21492c751fe7e4e6b.jpg"
+                                                        width="160">
+                                                </div>
+                                                <div class="promotion-item-info-wrap">
+                                                    <div class="promotion-discount-contain">
+                                                        <span class="discount-badge"></span>
+                                                        <span class="discount-word">지금 86% 할인 중</span>
+                                                    </div>
+                                                    <div class="item-title">
+                                                        <span>골전도 블루투스 이어폰 이어폰식 방수 노이즈 감소 이어폰, 검은색</span>
+                                                    </div>
+                                                    <div class="promotion-item-price">
+                                                        <span class="price-value">15,000</span>
+                                                        <span>원</span>
+                                                        <span class="item-badge-wrap">
+                                                            <img class="jikgu-badge"
+                                                                src="https://image6.coupangcdn.com/image/delivery_badge/default/pc/global_b/global_b.png">
+                                                        </span>
+                                                    </div>
+                                                    <div class="promotion-item-review">
+                                                        <span class="review-stars-bg">
+                                                            <span class="review-stars" style="width:80%"></span>
+                                                        </span>
+                                                        <span class="review-count">(387)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <article id="side-bar">
+                <ul class="promotion-banner">
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://pages.coupang.com/f/s46465">
+                            <img src="https://static.coupangcdn.com/ea/cmg_paperboy/image/1721709908208/W1_PC.jpg"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://pages.coupang.com/p/125040">
+                            <img src="https://static.coupangcdn.com/ia/cmg_paperboy/image/1721973250096/W1_PC.jpg"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://www.coupang.com/np/campaigns/1440">
+                            <img src="https://image7.coupangcdn.com/image/displayitem/displayitem_8ad9b5e0-fd76-407b-b820-6494f03ffc31.jpg"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://pages.coupang.com/p/78273">
+                            <img src="//image7.coupangcdn.com/image/displayitem/displayitem_53cacdff-4a29-4702-b9e4-c4dcdd38e677.jpg"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://www.coupang.com/np/categories/510691">
+                            <img src="https://image10.coupangcdn.com/image/displayitem/displayitem_480b8b44-0417-42ad-a7b0-d685b0424b46.png"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link" href="https://pages.coupang.com/p/68594">
+                            <img src="//image9.coupangcdn.com/image/displayitem/displayitem_ad84783d-4811-49c6-99e8-79a1085b0d8b.png"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                    <li class="cmg-promotion-wing-banner">
+                        <a class="banner-link"
+                            href="https://wing.coupang.com/tenants/vendor-signup/signup?utm_source=button_pc_coupang_web_rignt_wing&utm_medium=non_paid&utm_id=onsite_ca&utm_content=20240516">
+                            <img src="//image8.coupangcdn.com/image/displayitem/displayitem_92caf13f-61ae-4634-83c5-124d84633848.png"
+                                width="102" height="150" alt>
+                        </a>
+                    </li>
+                </ul>
+                <section id="my-view">
+                    <div class="side-cart">
+                        <a href="#">
+                            <!-- <strong>장바구니</strong> -->
+                            <em class="cart-count">0</em>
+                        </a>
+                    </div>
+                    <div class="recently-viewed-products">
+                        <a href="#">
+                            <!-- <strong>최근본상품</strong> -->
+                            <em class="total-element">0</em>
+                        </a>
+                    </div>
+                    <div class="recently-viewed-list">
+                        <div class="no-item">
+                            최근에 본 상품이
+                            <br>
+                            없습니다.
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+        <footer id="footer" class="footer_new">
+
+        </footer>
+    </div>
+</body>
+
+</html>
